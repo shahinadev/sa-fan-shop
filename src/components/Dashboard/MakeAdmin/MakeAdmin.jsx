@@ -17,9 +17,8 @@ const MakeAdmin = () => {
       email,
     };
     axios
-      .put(`https://blooming-escarpment-34729.herokuapp.com//make-admin/`, data)
+      .put(`https://blooming-escarpment-34729.herokuapp.com/make-admin/`, data)
       .then((res) => {
-        console.log(res.data);
         if (res.data?._id) {
           successMessage("User successfully changed to admin!", "success");
         } else {
