@@ -51,7 +51,7 @@ const MyOrders = () => {
   const deleteOrder = (id) => {
     setIsLoading(true);
     axios
-      .delete(`http://localhost:8080/orders/${id}`)
+      .delete(`https://blooming-escarpment-34729.herokuapp.com/orders/${id}`)
       .then((res) => {
         //filter orders after delete successfully..
         const newOrders = orders.filter((order) => order._id != id);

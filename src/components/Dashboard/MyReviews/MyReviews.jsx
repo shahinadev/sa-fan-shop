@@ -52,7 +52,7 @@ const MyReviews = () => {
   const deleteReview = (id) => {
     setIsLoading(true);
     axios
-      .delete(`http://localhost:8080/reviews/${id}`)
+      .delete(`https://blooming-escarpment-34729.herokuapp.com/reviews/${id}`)
       .then((res) => {
         //filter orders after delete successfully..
         const newOrders = reviews.filter((review) => review._id !== id);
