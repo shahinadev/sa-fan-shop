@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Container, Grid, Box, Typography, Rating } from "@mui/material";
 import TextField from "@mui/material/TextField";
-import Footer from "./../../shared/Footer/Footer";
-import Header from "./../../shared/Header/Header";
 import ReviewBanner from "../../../images/reviewBanner.jpg";
 import Button from "@mui/material/Button";
 import { useForm } from "react-hook-form";
@@ -47,7 +45,6 @@ const Review = () => {
   };
   return (
     <>
-      <Header />
       <Container className="my-5">
         <Grid
           container
@@ -110,7 +107,6 @@ const Review = () => {
           </Grid>
         </Grid>
       </Container>
-      <Footer />
     </>
   );
 };

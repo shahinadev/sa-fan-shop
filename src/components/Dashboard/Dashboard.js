@@ -27,6 +27,7 @@ import ManageOrders from "./ManageOrders/ManageOrders";
 import Pay from "./../pages/Pay/Pay";
 import MyReviews from "./MyReviews/MyReviews";
 import ManageProducts from "./ManageProducts/ManageProducts";
+import Review from "./../pages/Review/Review";
 
 const drawerWidth = 200;
 const Dashboard = (props) => {
@@ -61,14 +62,6 @@ const Dashboard = (props) => {
         </Link>
         {isAdmin ? (
           <>
-            <Link to={`${url}/addProduct`}>
-              <ListItem button>
-                <ListItemIcon>
-                  <AddIcon />
-                </ListItemIcon>
-                <ListItemText primary="Add Product" />
-              </ListItem>
-            </Link>
             <Link to={`${url}/manageOrders`}>
               <ListItem button>
                 <ListItemIcon>
@@ -85,28 +78,20 @@ const Dashboard = (props) => {
                 <ListItemText primary="Manage All Products" />
               </ListItem>
             </Link>
+            <Link to={`${url}/addProduct`}>
+              <ListItem button>
+                <ListItemIcon>
+                  <AddIcon />
+                </ListItemIcon>
+                <ListItemText primary="Add Product" />
+              </ListItem>
+            </Link>
             <Link to={`${url}/makeAdmin`}>
               <ListItem button>
                 <ListItemIcon>
                   <AddIcon />
                 </ListItemIcon>
                 <ListItemText primary="Make Admin" />
-              </ListItem>
-            </Link>
-            <Link to={`${url}/myOrders`}>
-              <ListItem button>
-                <ListItemIcon>
-                  <AddShoppingCartIcon />
-                </ListItemIcon>
-                <ListItemText primary="My Orders" />
-              </ListItem>
-            </Link>
-            <Link to={`${url}/myReviews`}>
-              <ListItem button>
-                <ListItemIcon>
-                  <ReviewsIcon />
-                </ListItemIcon>
-                <ListItemText primary="My Reviews" />
               </ListItem>
             </Link>
           </>
@@ -126,6 +111,14 @@ const Dashboard = (props) => {
                   <ReviewsIcon />
                 </ListItemIcon>
                 <ListItemText primary="My Reviews" />
+              </ListItem>
+            </Link>
+            <Link to={`${url}/review`}>
+              <ListItem button>
+                <ListItemIcon>
+                  <ReviewsIcon />
+                </ListItemIcon>
+                <ListItemText primary="Review" />
               </ListItem>
             </Link>
             <Link to={`${url}/pay`}>
@@ -251,6 +244,9 @@ const Dashboard = (props) => {
           </Route>
           <Route path={`${path}/myReviews`}>
             <MyReviews />
+          </Route>
+          <Route path={`${path}/review`}>
+            <Review />
           </Route>
         </Switch>
       </Box>
