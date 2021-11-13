@@ -3,7 +3,6 @@ import SingleReview from "./SingleReview/SingleReview";
 import "./SingleReview/ReviewCard.css";
 import axios from "axios";
 import Loading from "./../../../shared/Loading/Loading";
-import { Pagination } from "@mui/material";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -46,25 +45,17 @@ const Reviews = () => {
                 <SingleReview key={review._id} review={review} />
               ))
             )}
-            <Pagination
-              count={pageCount}
-              onChange={(event, value) => {
-                setPage(value);
-              }}
-              color="secondary"
-            />
-
-            {/* {[...Array(pageCount).keys()].map((index) => (
+            {[...Array(pageCount).keys()].map((index) => (
               <button
                 key={index}
                 className={`btn btn-primary mx-2 ${
-                  page === index && "selected"
+                  page === index && "selected2"
                 }`}
                 onClick={() => setPage(index)}
               >
                 {index + 1}
               </button>
-            ))} */}
+            ))}
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Blog = ({ title, img, desc }) => {
   return (
@@ -15,9 +16,9 @@ const Blog = ({ title, img, desc }) => {
         }}
       >
         <div className="image">
-          <a href="news-detail.html">
+          <Link to="news-detail.html">
             <img src={img} alt="" />
-          </a>
+          </Link>
           <div className="post-date">June 26, 2021</div>
         </div>
         <div className="lower-content">
@@ -28,12 +29,12 @@ const Blog = ({ title, img, desc }) => {
             </li>
           </ul>
           <h4>
-            <a href="news-detail.html">{title}</a>
+            <Link to="news-detail.html">{title}</Link>
           </h4>
           <div className="text">{desc}</div>
-          <a href="news-detail.html" className="read-more theme-btn">
+          <Link to="news-detail.html" className="read-more theme-btn">
             Read More
-          </a>
+          </Link>
         </div>
       </div>
     </div>

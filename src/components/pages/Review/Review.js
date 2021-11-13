@@ -49,14 +49,14 @@ const Review = () => {
         <Grid
           container
           rowSpacing={1}
-          columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 2 }}
+          columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 1 }}
         >
-          <Grid item xs={6}>
+          <Grid item xs={12} lg={6}>
             <Typography paragraph>Give your feedback / review us</Typography>
             <form onSubmit={handleSubmit(onSubmit)} className="my-5">
               <Box sx={{ my: 3 }}>
                 <TextField
-                  sx={{ width: "50%" }}
+                  sx={{ width: { xs: "100%", lg: "50%" } }}
                   id="standard-basic"
                   label="Name"
                   value={user.displayName}
@@ -65,7 +65,7 @@ const Review = () => {
               </Box>
               <Box>
                 <TextField
-                  sx={{ width: "50%" }}
+                  sx={{ width: { xs: "100%", lg: "50%" } }}
                   id="standard-basic"
                   label="Email"
                   value={user.email}
@@ -74,7 +74,7 @@ const Review = () => {
               </Box>
               <Box sx={{ my: 3 }}>
                 <TextField
-                  sx={{ width: "50%" }}
+                  sx={{ width: { xs: "100%", lg: "50%" } }}
                   id="filled-textarea"
                   label="Feedback / review"
                   placeholder="your feedback"
@@ -102,7 +102,7 @@ const Review = () => {
               </Button>
             </form>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} lg={6}>
             <img src={ReviewBanner} className="w-100 rounded-3" alt="" />
           </Grid>
         </Grid>
