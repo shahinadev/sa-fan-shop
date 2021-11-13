@@ -1,9 +1,9 @@
 import React from "react";
-import MyOrders from "./../MyOrders/MyOrders";
+import ManageOrders from "./../ManageOrders/ManageOrders";
 const DashboardHome = () => {
   return (
     <div>
-      <MyOrders />
+      <ManageOrders />
     </div>
   );
 };
