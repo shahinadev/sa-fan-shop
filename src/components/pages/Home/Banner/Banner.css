@@ -1,0 +1,11 @@
+.banner {
+  background-position: center center;
+  min-height: 770px;
+  width: 100%;
+  margin-bottom: -150px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: -100px;
+  background-origin: content-box;
+}

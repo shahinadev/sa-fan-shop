@@ -1,0 +1,59 @@
+.we_are_ready_two .we_are_content {
+  background: #ffffff;
+  padding: 40px 50px;
+  box-shadow: 0px 4px 20px -10px rgb(22 47 98 / 30%);
+}
+
+.we_are_ready_three .we_are_content h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: #162f62;
+}
+.we_are_ready_three .we_are_content .booking_form {
+  margin-top: 35px;
+}
+.we_are_ready_three .we_are_content .booking_form .form-group {
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.custom-control-label::before,
+.custom-file-label,
+.custom-select {
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+.we_are_ready_three .we_are_content .booking_form .form-control.text_area,
+.we_are_ready_three .we_are_content .booking_form .custom-select.text_area {
+  line-height: 20px;
+  padding: 20px;
+  height: 150px;
+}
+
+.we_are_ready_three .we_are_content .booking_form .custom_button .theme_btn {
+  border: none;
+  width: 190px;
+  box-shadow: none;
+  margin: 10px 0;
+}
+
+button {
+  outline: none;
+  border: none;
+}

@@ -1,0 +1,35 @@
+.logo {
+  height: 7% !important;
+  width: 70%;
+}
+.nav-active {
+  border-bottom: 1px solid;
+  width: max-content;
+  border-radius: 10px;
+}
+.nav-link {
+  margin-right: 5px;
+  font-size: 18px;
+  line-height: 100%;
+  color: rgb(0, 0, 0) !important;
+}
+.navbar {
+  padding: 0;
+}
+.bg-custom {
+  padding: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #ffff;
+}
+.navbar-light .navbar-toggler-icon {
+  background-color: #fff;
+}
+.navbar-light .navbar-toggler {
+  border-color: orange;
+  outline: none;
+  color: #fff;
+  background-color: #fff;
+}
+.text-light {
+  color: #fff !important;
+}

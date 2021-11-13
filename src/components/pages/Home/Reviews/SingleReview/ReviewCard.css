@@ -1,0 +1,83 @@
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+.testimonial1 {
+  font-family: "Montserrat", sans-serif;
+  color: #8d97ad;
+  font-weight: 300;
+}
+
+.testimonial1 h1,
+.testimonial1 h2,
+.testimonial1 h3,
+.testimonial1 h4,
+.testimonial1 h5,
+.testimonial1 h6 {
+  color: #3e4555;
+}
+
+.testimonial1 .bg-light {
+  background-color: #f4f8fa !important;
+}
+
+.testimonial1 .subtitle {
+  color: #8d97ad;
+  line-height: 24px;
+}
+
+.testimonial1 .testi1 .card-body {
+  padding: 35px;
+}
+
+.testimonial1 .testi1 .thumb {
+  padding: 10px 20px 10px;
+  padding-left: 90px;
+  margin-left: -35px;
+}
+
+.testimonial1 .testi1 .thumb .thumb-img {
+  width: 60px;
+  left: 20px;
+  top: -10px;
+}
+
+.testimonial1 .testi1 h5 {
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.testimonial1 .testi1 .devider {
+  height: 1px;
+  background: rgba(120, 130, 140, 0.13);
+  width: 100px;
+}
+
+.testimonial1 .bg-success-gradiant {
+  background: #2cdd9b;
+  background: -webkit-linear-gradient(
+    legacy-direction(to right),
+    #2cdd9b 0%,
+    #1dc8cc 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#2cdd9b),
+    to(#1dc8cc)
+  );
+  background: -webkit-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+  background: -o-linear-gradient(left, #2cdd9b 0%, #1dc8cc 100%);
+  background: linear-gradient(to right, #2cdd9b 0%, #1dc8cc 100%);
+}
+
+.testimonial1 .card.card-shadow {
+  -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+  box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+
+.testimonial1 .owl-theme .owl-dots .owl-dot.active span,
+.testimonial1 .owl-theme .owl-dots .owl-dot:hover span {
+  background: #316ce8;
+}
+.selected {
+  background-color: #1dc8cc !important;
+}

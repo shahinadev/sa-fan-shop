@@ -1,0 +1,30 @@
+i.fa {
+  display: inline-block;
+  margin-right: 5px;
+}
+i.social-icon {
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+a i {
+  color: #fff;
+}
+.footer-main {
+  background-image: url("https://mohsinalam.com/medicit/images/footer.png");
+  overflow: hidden;
+  background-size: cover;
+  padding-top: 100px;
+}
+a {
+  text-decoration: none;
+}
+.footer-copyright {
+  background: #162f62;
+  text-align: left;
+  padding: 20px 0;
+  /* margin-bottom: -29px; */
+}
+.footer-copyright p {
+  color: #fff;
+}
