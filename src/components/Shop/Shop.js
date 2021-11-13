@@ -3,23 +3,30 @@ import Header from "../shared/Header/Header";
 import Footer from "../shared/Footer/Footer";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import { Container, Typography, Pagination } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import axios from "axios";
 import Product from "../pages/Home/Products/Product/Product";
 import Loading from "./../shared/Loading/Loading";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
+  const [pageCount, setPageCount] = useState(0);
+  const [page, setPage] = useState(0);
   useEffect(() => {
+    const size = 10;
     axios
-      .get(`https://blooming-escarpment-34729.herokuapp.com/products`)
+      .get(
+        `https://blooming-escarpment-34729.herokuapp.com/products?page=${page}&&size=${size}`
+      )
       .then((res) => {
         setProducts(res.data.products);
+        const pageNumber = Math.ceil(res.data.count / size);
+        setPageCount(pageNumber);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [page]);
   return (
     <>
       <Header />
@@ -57,7 +64,16 @@ const Shop = () => {
             )}
           </Grid>
         </Box>
-        <Box sx={{ my: 5, display: "flex", justifyContent: "center" }}></Box>
+        <Box sx={{ my: 5, display: "flex", justifyContent: "center" }}>
+          {[...Array(pageCount).keys()].map((index) => (
+            <button
+              className={`btn btn-success mx-2 ${page === index && "selected"}`}
+              onClick={() => setPage(index)}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </Box>
       </Container>
       <Footer />
     </>
