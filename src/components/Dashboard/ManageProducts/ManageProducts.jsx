@@ -118,7 +118,7 @@ const ManageProducts = () => {
                           <>
                             <tr key={index}>
                               <td>
-                                <Link to={`/buy/${product._id}`}>
+                                <Link to={`/purchase/${product._id}`}>
                                   <img
                                     src={product.product_image}
                                     alt=" "
@@ -127,7 +127,7 @@ const ManageProducts = () => {
                                 </Link>
                               </td>
                               <td>
-                                <Link to={`/buy/${product._id}`}>
+                                <Link to={`/purchase/${product._id}`}>
                                   {product.product_name}
                                 </Link>
                               </td>
