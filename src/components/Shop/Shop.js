@@ -10,23 +10,16 @@ import Loading from "./../shared/Loading/Loading";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
-  const [pageCount, setPageCount] = useState(0);
-  const [page, setPage] = useState(0);
   useEffect(() => {
-    const size = 10;
     axios
-      .get(
-        `https://blooming-escarpment-34729.herokuapp.com/products?page=${page}&&size=${size}`
-      )
+      .get(`https://blooming-escarpment-34729.herokuapp.com/products`)
       .then((res) => {
         setProducts(res.data.products);
-        const pageNumber = Math.ceil(res.data.count / size);
-        setPageCount(pageNumber);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, [page]);
+  }, []);
   return (
     <>
       <Header />
@@ -64,14 +57,7 @@ const Shop = () => {
             )}
           </Grid>
         </Box>
-        <Box sx={{ my: 5, display: "flex", justifyContent: "center" }}>
-          <Pagination
-            count={pageCount}
-            page={page}
-            onChange={(e, val) => setPage(val)}
-            color="secondary"
-          />
-        </Box>
+        <Box sx={{ my: 5, display: "flex", justifyContent: "center" }}></Box>
       </Container>
       <Footer />
     </>
