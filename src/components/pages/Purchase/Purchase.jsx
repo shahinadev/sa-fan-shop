@@ -2,12 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import useAuth from "./../../../hooks/useAuth";
-import "./Buy.css";
-import Header from "./../../shared/Header/Header";
-import Footer from "./../../shared/Footer/Footer";
+import useAuth from "../../../hooks/useAuth";
+import "./Purchase.css";
+import Header from "../../shared/Header/Header";
+import Footer from "../../shared/Footer/Footer";
 import Swal from "sweetalert2";
-const Buy = () => {
+const Purchase = () => {
   const { id } = useParams();
   const { user } = useAuth();
   const [product, setProduct] = useState({});
@@ -231,4 +231,4 @@ const Buy = () => {
   );
 };
 
-export default Buy;
+export default Purchase;

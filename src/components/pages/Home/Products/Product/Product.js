@@ -8,14 +8,7 @@ import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
-  const {
-    product_name,
-    price,
-    product_image,
-    product_quantity,
-    product_desc,
-    _id,
-  } = product;
+  const { product_name, price, product_image, product_desc, _id } = product;
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -33,7 +26,7 @@ const Product = ({ product }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Link to={`/buy/${_id}`}>
+        <Link to={`/purchase/${_id}`}>
           <Button size="big" variant="contained" color="success">
             Buy Now
           </Button>

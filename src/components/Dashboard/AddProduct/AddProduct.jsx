@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AddService.css";
 import {
   getStorage,
@@ -12,6 +12,7 @@ import axios from "axios";
 import useAuth from "./../../../hooks/useAuth";
 const AddProduct = () => {
   const { user } = useAuth();
+  const [uploadProgress, setUploadProgress] = useState(0);
   //upload file to firebase storage
   const storage = getStorage();
   const handleFileUpload = (file, data) => {
@@ -25,7 +26,7 @@ const AddProduct = () => {
         // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
         const progress =
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        console.log("Upload is " + progress + "% done");
+        setUploadProgress(progress);
       },
       (error) => {
         console.log(error);
@@ -67,6 +68,9 @@ const AddProduct = () => {
       showConfirmButton: false,
       timer: 1500,
     });
+    setTimeout(() => {
+      setUploadProgress(0);
+    }, 500);
   };
   //save to database by api
   const onSubmit = (data) => {
@@ -79,6 +83,7 @@ const AddProduct = () => {
           <div className="we_are_content">
             <div className="online_booking">
               <h2>Add a New Product</h2>
+              <p>{uploadProgress}% file upload completed</p>
               <form className="booking_form" onSubmit={handleSubmit(onSubmit)}>
                 <div className="row">
                   <div className="col-lg-6 col-sm-12 form-group">

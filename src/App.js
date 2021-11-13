@@ -7,7 +7,7 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Shop from "./components/Shop/Shop";
 import Review from "./components/pages/Review/Review";
 import Dashboard from "./components/Dashboard/Dashboard";
-import Buy from "./components/pages/Buy/Buy";
+import Purchase from "./components/pages/Purchase/Purchase";
 import Pay from "./components/pages/Pay/Pay";
 import PageNotFound from "./components/pages/PageNotFound/PageNotFound";
 const App = () => {
@@ -23,8 +23,8 @@ const App = () => {
         <Route path="/login">
           <Login />
         </Route>
-        <PrivateRoute path="/buy/:id">
-          <Buy />
+        <PrivateRoute path="/purchase/:id">
+          <Purchase />
         </PrivateRoute>
         <Route path="/pay">
           <Pay />
